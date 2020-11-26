@@ -1,0 +1,74 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+For this problem, we will explore the issue of \emph{truthfulness} in the Stable Matching Problem and specifically in the Gale-Shapley algorithm. The basic question is: Can a man or a woman end up better off by lying about his or her preferences? More concretely, we suppose each participant has a true preference order. Now consider a woman \emph{w}. Suppose \emph{w} prefers man \emph{m} to \emph{m'}, but both \emph{m} and \emph{m'} are low on her list of preferences. Can it be the case that by switching the order of \emph{m} and \emph{m'} on her list of preferences(i.e., by falsely claiming that she prefers \emph{m'} to m) and running the algorithm with this false preference list, \emph{w} will end up with a man \emph{m''} that she truly prefers to both \emph{m} and \emph{m'}?(We can ask the same question for men, but will focus on the case of women for purposes of this question.)
+}
+
+\textbf{
+Resovle this question by doing one of the following two things:
+}
+\textbf{
+(a) Give a proof that, for any set of preference lists, switching the order of a pair on the list cannot improve a woman's partner in the Gale-Shapley algorithm; or
+}
+
+\textbf{
+(b) Give an example of a set of preference lists for which there is a switch that would improve the partner of a woman who switched preferences.
+}
+\hspace*{\fill} \\
+
+{
+    There maybe a switch that would improve the partner of a woman who switched preferences.
+    
+    Consider the following instance. As show in Table~\ref{man_table} and Table~\ref{woman_table}, we can easy get the stable match which is 'A-Y, B-Z, C-X'.
+    
+\begin{table}[H]
+\caption{Men's preference table}
+\label{man_table}
+\centering
+\scalebox{1}{
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+                                                                                  & \cellcolor[HTML]{F79646}1st & \cellcolor[HTML]{F79646}2st & \cellcolor[HTML]{F79646}3st \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Xavier}}} & A                           & C                           & B                           \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Yancey}}} & A                           & B                           & C                           \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Zeus}}}   & B                           & A                           & C                           \\ \hline
+\end{tabular}
+}
+\end{table}
+
+
+\begin{table}[H]
+\caption{Women's preference table}
+\label{woman_table}
+\centering
+\scalebox{1}{
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+                                                                                  & \cellcolor[HTML]{F79646}1st & \cellcolor[HTML]{F79646}2st & \cellcolor[HTML]{F79646}3st \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Amy}}}    & Z                           & Y                           & X                           \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Bertha}}} & Y                           & X                           & Z                           \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Clare}}}  & Z                           & X                           & Y                           \\ \hline
+\end{tabular}
+}
+\end{table}
+
+Next, we change the preference of Amy. We exchange the indexes of 'Y' and 'X' in Amy's preference and get Table~\ref{woman_table_change}.
+\begin{table}[H]
+\caption{Women's preference table(changed)}
+\label{woman_table_change}
+\centering
+\scalebox{1}{
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+                                                                                  & \cellcolor[HTML]{F79646}1st & \cellcolor[HTML]{F79646}2st & \cellcolor[HTML]{F79646}3st \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Amy}}}    & Z                           & {\color[HTML]{FE0000} X}    & {\color[HTML]{FE0000} Y}    \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Bertha}}} & Y                           & X                           & Z                           \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{0070C0}{\color[HTML]{FFFFFF} \textbf{Clare}}}  & Z                           & X                           & Y                           \\ \hline
+\end{tabular}
+}
+\end{table}
+
+We can find that after the change, the final result is 'A-Z, B-Y, C-X' which indicates that Amy matches a better mate Zeus.
+
+}

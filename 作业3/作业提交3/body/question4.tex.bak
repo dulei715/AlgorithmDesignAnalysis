@@ -1,0 +1,28 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Given an $O(n lgk)$-time algorithm to merge $k$ sorted lists into one sorted list, where $n$ is the total number of elements in all the input lists.(\emph{Hint}: Use a min-heap for k-way merging).
+}
+\hspace*{\fill} \\
+
+We can generalize the 2-array merge to $k$-array merge. It is obviously that we can set $k$ points and put each of them at the first elements of the $k$ arrays. Then we should compare the $k$ elements pointed by $k$ the pointers and move the pointer pointing to the smallest one to the next element. As to the comparison of the $k$ elements, we can use min-heap to store and sorted them. The algorithm is showed in Alg~\ref{k_merge}.
+
+\begin{algorithm}
+\caption{Merge k sorted array algorithm}
+\label{k_merge}
+\begin{algorithmic}[1]
+\REQUIRE $k$ sorted arrays $A[1],A[2],...,A[k]$
+\STATE Extract the first element of $A[1],A[2],...,A[k]$ respectively.
+\WHILE{$S\neq \phi$}
+\STATE{Take a node $u$ from $S$}
+    \IF{Explored[$u$]=$false$}
+        \STATE Set Explored[$u$]=$true$
+        \FOR{each edge($u,v$) incident to $u$}
+            \STATE{Add $v$ to the stack $S$}
+        \ENDFOR
+    \ELSE
+        \STATE{\color{blue}Return TRUE}
+    \ENDIF
+\ENDWHILE
+\STATE Return $FALSE$

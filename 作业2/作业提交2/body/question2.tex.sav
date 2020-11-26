@@ -1,0 +1,17 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Show that when all elements are distinct, the best-case running time of HEAPSORT is $\Omega(nlg n)$
+}
+\hspace*{\fill} \\
+
+%Suppose we have $n$ distinct number $a_1,a_2,...,a_n$. 
+%In order to simplify our process of prove, we can further suppose that $n=2^k-1$, where $k\in N^{+}$.
+%We note $b_1,b_2,...,b_n$ as the heap array order of $a_1,a_2,...,a_n$. According to the process of HEAPSORT, each step of swap the first element and the last element and heapfiying is at
+%According to the process of heap construction, the heap is a complete binary tree. Let $k$ be the number of layer. We have 
+We first prove the lower bound of sorting-based comparison algorithm is $\Omega(nlog n)$. 
+
+We can construct a decision-making tree whose node represents a comparison between two elements.
+
+Because HEAPSORT is one kind of sorting-based comparison algorithm. So we can easily get the best-case running time of HEAPSORT is $Omega(nlg n)$

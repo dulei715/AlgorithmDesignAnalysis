@@ -1,0 +1,35 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+2.某加油站有一个大的地下储油罐存储汽油；这个罐一次至多存$L$ 加仑。订购油是相当贵的，因此他们希望订货要比较少。每次订货，他们除了所订购油的费用之外，还需要付固定价格$P$的运费。但是，每加仑油多存1天的费用是$c$，因此提前订购会增加存储的费用。
+}
+
+\textbf{
+他们计划在冬天休息一周，希望储罐到休业的时间是空的。幸运的是，基于多年的经验，他们对于直到这个时间之前的每一天将需要多少油有着精确的规划。假定到他们休业还有$n$天，对于$i=1,2,...,n$的每一天$i$他们需要$g_i$加仑汽油。假定储罐在第0天结束时是空的。给出一个算法来决定他们应该在哪天订货，以及订多少，以使得他们的总费用最小。
+}
+
+
+令$W(i,j)$表示在第$i$天加油,第$j$天刚好用完的最小消耗(中间可以加油)。于是我们可以得到：
+\begin{equation}
+W(i,j)=
+\left\{
+             \begin{array}{lr}
+             L,
+             & (i=j) \\
+             \min\{\min\limits_{k=i}^{j-1}\{W(i,k)+W(k+1,j)\}, L+\sum\limits_{m=i+1}^{j}(m-i)\cdot g_m\},
+             & (i<j)
+             \end{array}
+\right.
+\end{equation}
+算法设计如下~\ref{alg_2}
+\begin{algorithm}
+\caption{Optimal path count}
+\label{alg_2}
+\begin{algorithmic}[1]
+\REQUIRE 4
+\STATE{}
+\STATE{Return $C[v][2]$}
+\end{algorithmic}
+\end{algorithm}
+

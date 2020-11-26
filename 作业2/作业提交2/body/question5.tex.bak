@@ -1,0 +1,42 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+There's a natural intuition that two nodes that are far apart in a communication network——separated by many hops——have a more tenuous connection than two nodes that are close together. There are a number of algorithmic results that are based to some extent on different ways of making this notion precise. Here's one that involves the susceptibility of paths to the deletion of nodes.
+}
+
+\textbf{
+Suppose that an $n$-node undirected graph $G=(V,E)$ contains two nodes $s$ and $t$ such that the distance between $s$ and $t$ is strictly greater than $n/2$. Show that there must exist some node $v$, not equal to either $s$ or $t$, such that deleting $v$ from $G$ destroys all $s-t$ paths.(In other words, the graph obtained from $G$ by deleting $v$ contains no path from $s$ to $t$.) Give an algorithm with running time $O(m+n)$ to find such a node $v$.
+}
+
+\hspace*{\fill} \\
+
+According to BFS algorithm and the given conditions, as shown in figure~\ref{figure_5_1}, there exists an separated layers satisfying that the count of layers is $m$ and $m-1> n/2 $. The problem is equal to Pigeon nest problem. Notice that there remain at most $n-2$ vertexes which will be put into $m-1$ cells. And notice that $2(m-1)>n>n-2$. So there must be at least one cell(actually two cells) that contains only one vertex. That is to say there exists some node $v$ that satisfying our goal.
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/5_1.eps}\\
+  \caption{The layers of breadth-first search}\label{figure_5_1}
+\end{figure}
+
+We next give an algorithm to find one of these vertex.
+\begin{algorithm}
+\caption{Cycle Detected}
+\label{find_cycle}
+\begin{algorithmic}[1]
+\REQUIRE $s$
+\STATE Initialize $S$ to be a stack with one elements $s$
+\WHILE{$S\neq \phi$}
+\STATE{Take a node $u$ from $S$}
+    \IF{Explored[$u$]=$false$}
+        \STATE Set Explored[$u$]=$true$
+        \FOR{each edge($u,v$) incident to $u$}
+            \STATE{Add $v$ to the stack $S$}
+        \ENDFOR
+    \ELSE
+        \STATE{\color{blue}Return TRUE}
+    \ENDIF
+\ENDWHILE
+\STATE Return $FALSE$
+
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,11 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Let us say that a graph $G=(V,E)$ is \emph{near-tree} if it is connected and has at most $n+8$ edges, where $n=|V|$. Give an algorithm with running time $O(n)$ that takes a near-tree $G$ with costs on its edges, and returns minimum spanning tree of $G$. You may assume that all the edge costs are distinct.
+}
+
+
+\hspace*{\fill} \\
+
+We can use Kruskal algorithm to handle this problem. Because the the graph has most $n+8$ edges, we can use count sorting to sort the edges which costs $O(n)$. We visit each edge and test whether the current edge's adding will construct a circle. If not, add it to the result. We can use two node $n_l$ and $n_r$, which are pointed by two parts divided by the first vertex, respectively. In this way, we can test whether an edge will construct a circle in $O(1)$ time. Because the graph $G$ has most $n+8$ edges, the cost of constructing minimum spanning tree of $G$ is $O(n)$.

@@ -1,0 +1,17 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+
+For this problem, we will explore the issue of \emph{truthfulness} in the Stable Matching Problem and specifically in the Gale-Shapley algorithm. The basic question is: Can a man or a woman end up better off by lying about his or her preferences? More concretely, we suppose each participant has a true preference order. Now consider a woman \emph{w}. Suppose \emph{w} prefers man \emph{m} to \emph{m'}, but both \emph{m} and \emph{m'} are low on her list of preferences. Can it be the case that by switching the order of \emph{m} and \emph{m'} on her list of preferences(i.e., by falsely claiming that she prefers \emph{m'} to m) and running the algorithm with this false preference list, \emph{w} will end up with a man \emph{m''} that she truly prefers to both \emph{m} and \emph{m'}?(We can ask the same question for men, but will focus on the case of women for purposes of this question.)
+
+Resovle this question by doing one of the following two things:
+
+(a) Give a proof that, for any set of preference lists, switching the order of a pair on the list cannot improve a woman's partner in the Gale-Shapley algorithm; or
+
+(b) Give an example of a set of preference lists for which there is a switch that would improve the partner of a woman who switched preferences.
+
+\hspace*{\fill} \\
+
+\texttt{
+
+}

@@ -1,0 +1,96 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Take the following list of functions and arrange them in ascending order of growth rate. That is, if function $g(n)$ immediately follows function $f(n)$ in your list, then it should be the case that $f(n)$ is $O(g(n))$.
+}
+\begin{enumerate}
+  \item $f_1(n)=n^{2.5}$
+  \item $f_2(n)=\sqrt{2n}$
+  \item $f_3(n)=n+10$
+  \item $f_4(n)=10^{n}$
+  \item $f_5(n)=100^n$
+  \item $f_6(n)=n^{2}\textrm{log} n$
+  \item $g_1(n)=2^{\sqrt{\textrm{log} n}}$
+  \item $g_2(n)=2^n$
+  \item $g_4(n)=n^{4/3}$
+  \item $g_3(n)=n(\textrm{log} n)^3$
+  \item $g_5(n)=n^{\textrm{log} n}$
+  \item $g_6(n)=2^{2^n}$
+  \item $g_7(n)=2^{n^2}$
+\end{enumerate}
+
+\hspace*{\fill} \\
+
+{
+    It is easy to get the following basic sequence showed in Table~\ref{basic_order}.
+
+\begin{table}[H]
+\caption{Part of the ranking}
+\label{basic_order}
+\centering
+\scalebox{1}{
+\begin{tabular}{|c|c|l|l|}
+\hline
+2  & \multicolumn{3}{c|}{$f_2(n)=\sqrt{2n}$} \\ \hline
+3  & \multicolumn{3}{c|}{$f_3(n)=n+10$}      \\ \hline
+9  & \multicolumn{3}{c|}{$g_4(n)=n^{4/3}$}   \\ \hline
+1  & \multicolumn{3}{c|}{$f_1(n)=n^{2.5}$}   \\ \hline
+8  & \multicolumn{3}{c|}{$g_2(n)=2^{n}$}     \\ \hline
+4  & \multicolumn{3}{c|}{$f_4(n)=10^{n}$}    \\ \hline
+5  & \multicolumn{3}{c|}{$f_5(n)=100^{n}$}   \\ \hline
+13 & \multicolumn{3}{c|}{$g_7(n)=2^{n^2}$}   \\ \hline
+12 & \multicolumn{3}{c|}{$g_6(n)=2^{2^n}$}   \\ \hline
+\end{tabular}
+}
+\end{table}
+
+Then we compare the others with some pivotal functions in Table~\ref{basic_order}.
+
+Consider $f_6(n)=n^2\textrm{log} n$, we can easily know that $f_6(n) = O(f_1(n))$ and $g_4(n)=O(f_6(n))$.
+
+Maybe, it's difficult to find the position of $g_1(n)$. We compare $g_1(n)$ with $f_2(n)$. Let $m=\sqrt{\textrm{log} n}$, then we have $n=2^{m^2}$. As show in Equation~\ref{equ_1}. So we have $g_1(n)=O(f_2(n))$.
+\begin{equation}\label{equ_1}
+%\begin{align}
+  \lim\limits_{n \to \infty} \frac{g_1(n)}{f_2(n)}  = \lim\limits_{m \to \infty} \frac{2^m}{\sqrt{2}\cdot 2^{\frac{1}{2}m^2}} = 0
+%\end{align}
+\end{equation}
+
+It is obviously that $f_3(n)=O(g_3(n))$. Now we compare $g_3(n)=n(\textrm{log} n)^3$ with $g_4(n)=n^{4/3}$. Let $m=\textrm{log} n$, then $n=2^m$. And we can get Equation~\ref{equ_2}.
+\begin{equation}\label{equ_2}
+  \lim\limits_{n \to \infty} \frac{g_3(n)}{g_4(n)}  = \lim\limits_{m \to \infty} \frac{m^3}{2^{\frac{1}{3}m}} = 0
+\end{equation}
+Therefore, $g_3(n)=O(g_4(n))$.
+
+Finally, we assure where $g_5(n)=n^{\textrm{log} n}$ should be placed. It is easy to know that $f_1(n)=O(g_5(n))$. Owing to the fact that $g_5(n)=n^{\textrm{log} n}=2^{\textrm{log} (n^{\textrm{log} n})}=2^{{\textrm{(log n)}^2}}$, we guess $g_5(n)$ is between $f_1(n)$ and $g_2(n)$. Let $m=\textrm{log} n$, then $n=2^m$. And we can get Equation~\ref{equ_3}.
+\begin{equation}\label{equ_3}
+  \lim\limits_{n \to \infty} \frac{g_5(n)}{g_2(n)}  = \lim\limits_{m \to \infty} \frac{2^{m^2}}{2^{2^m}} = 0
+\end{equation}
+So we have $g_5(n)=O(g_2(n))$. 
+
+We summarize the final result in Table~\ref{final_order}.
+\begin{table}[H]
+\caption{Rank of functions}
+\label{final_order}
+\centering
+\scalebox{1}{
+\begin{tabular}{|c|c|l|l|}
+\hline
+7  & \multicolumn{3}{c|}{$g_1(n)=2^{\sqrt{\textrm{log}   n}}$} \\ \hline
+2  & \multicolumn{3}{c|}{$f_2(n)=\sqrt{2n}$}                   \\ \hline
+3  & \multicolumn{3}{c|}{$f_3(n)=n+10$}                        \\ \hline
+10 & \multicolumn{3}{c|}{$g_3(n)=n(\textrm{log} n)^3$}         \\ \hline
+9  & \multicolumn{3}{c|}{$g_4(n)=n^{4/3}$}                     \\ \hline
+6  & \multicolumn{3}{c|}{$f_6(n)=n^2\textrm{log} n$}           \\ \hline
+1  & \multicolumn{3}{c|}{$f_1(n)=n^{2.5}$}                     \\ \hline
+11 & \multicolumn{3}{c|}{$g_5(n)=n^{\textrm{log} n}$}          \\ \hline
+8  & \multicolumn{3}{c|}{$g_2(n)=2^{n}$}                       \\ \hline
+4  & \multicolumn{3}{c|}{$f_4(n)=10^{n}$}                      \\ \hline
+5  & \multicolumn{3}{c|}{$f_5(n)=100^{n}$}                     \\ \hline
+13 & \multicolumn{3}{c|}{$g_7(n)=2^{n^2}$}                     \\ \hline
+12 & \multicolumn{3}{c|}{$g_6(n)=2^{2^n}$}                     \\ \hline
+\end{tabular}
+}
+\end{table}
+
+}

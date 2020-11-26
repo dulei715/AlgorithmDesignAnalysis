@@ -1,0 +1,34 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Give an algorithm to detect whether a give undirected graph contains a cycle. If the graph contains a cycle, then your algorithm should output one. (It should not output all cycles in the graph, just one of them.) The running time of your algorithm should be $O(m+n)$ for a graph with $n$ nodes and $m$ edges.
+}
+
+
+\hspace*{\fill} \\
+
+We design the algorithm based on depth-first traversal. As shown in Alg~\ref{find_cycle},we mark the difference between our cycle detected algorithm and DFS algorithm as blue. It is clearly that, when we find a repeatedly accessing vertex, there is a cycle in the graph.
+\begin{algorithm}
+\caption{Cycle Detected}
+\label{find_cycle}
+\begin{algorithmic}[1]
+\REQUIRE $s$
+\STATE Initialize $S$ to be a stack with one elements $s$
+\WHILE{$S\neq \phi$}
+\STATE{Take a node $u$ from $S$}
+    \IF{Explored[$u$]=$false$}
+        \STATE Set Explored[$u$]=$true$
+        \FOR{each edge($u,v$) incident to $u$}
+            \STATE{Add $v$ to the stack $S$}
+        \ENDFOR
+    \ELSE
+        \STATE{\color{blue}Return TRUE}
+    \ENDIF
+\ENDWHILE
+\STATE Return $FALSE$
+
+\end{algorithmic}
+\end{algorithm}
+
+Because we only modify one step in the "if" judgement in the while cycle, it won't affect the time complexity of the original DFS time. Therefore, the time complexity is $O(m+n)$.

@@ -1,0 +1,9 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+What is the running time of HEAPSORT on an array $A$ of length $n$ that is already sorted in increasing order? What about decreasing order?
+}
+\hspace*{\fill} \\
+
+1. When $n$ is already sorted in increasing order, each mid-node should be shift to the leaf lay. Suppose there are $n$ nodes, then there are $\lfloor log n\rfloor+1$ layers

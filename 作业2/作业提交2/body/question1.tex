@@ -1,0 +1,32 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Let $f(n)$ and $g(n)$ be asymptotically positive functions. Prove or disprove each of the following conjectures.
+\begin{enumerate}
+  \item $f(n)=O(g(n))$ implies $g(n)=O(f(n))$.
+  \item $f(n)+g(n)=\Theta(min(f(n),g(n)))$.
+  \item $f(n)=O(g(n))$ implies $lg(f(n))=O(lg(g(n)))$, where $lg(g(n))\geq 1$ and $f(n)\geq 1$ for all sufficiently large $n$.
+  \item $f(n)=O(g(n))$ implies $2^{f(n)}=O(2^{g(n)})$.
+  \item $f(n)=O((f(n))^2)$.
+  \item $f(n)=O(g(n))$ implies $g(n)=\Omega(f(n))$.
+  \item $f(n)=\Theta(f(n/2))$.
+\end{enumerate}
+}
+
+\hspace*{\fill} \\
+
+1. \textbf{False}. Given an example that $f(n)=n$ and $g(n)=n^2$, we have $f(n)=O(g(n))$ but $g(n)\neq O(f(n))$.
+
+2. \textbf{False}. Given an instance that $f(n)=n$ and $g(n)=n^2$, we have $f(n)+g(n)=n^2+n$. Because $\Theta(min(f(n),g(n)))=\Theta(n)$, we can conclude that $f(n)+g(n)\neq\Theta(min(f(n),g(n)))$.
+
+3. \textbf{True}. Due to the condition that $f(n)=O(g(n))$, we can find a positive number $N$ and $C_1$ satisfy that when $n>N$, $f(n)\leq C_1\cdot g(n)$. Then we have $lg(f(n))\leq lg(C_1\cdot g(n))=lg(C_1)+lg(g(n))\leq C_2\cdot lg(g(n))$, where $C_2$ is a positive number and $C_2 > 1$.
+Therefore, we have $lg(f(n))=O(lg(g(n)))$.
+
+4. \textbf{False}. Given an example that $f(n)=2log(n)$ and $g(n)=log(n)$, we have $f(n)=O(g(n))$. $2^{f(n)}=n^2$, $2^{g(n)}=n$. Because $n^2\neq O(n)$, we can conclude that $2^{f(n)}\neq O(2^{g(n)})$.
+
+5. \textbf{False}. Suppose that $f(n)=\frac{1}{n}$, then $(f(n))^2=\frac{1}{n^2}$. Because $\frac{1}{n}\neq O(\frac{1}{n^2})$, we can conclude that $f(n)\neq O((f(n))^2)$. 
+
+6. \textbf{True}. Due to the condition that $f(n)=O(g(n))$, we can find a positive number $N$ and $C_1$ satisfy that when $n>N$, $f(n)\leq C_1\cdot g(n)$. That is we can find a positive number $C_2=\frac{1}{C_1}$ satisfy that when $n>N$, $g(n)\geq C_2\cdot g(n)$. Therefore we have $g(n)=\Omega(f(n))$.
+
+7. \textbf{False}. Suppose that $f(n)=2^{2n}$, then we have $f(n/2)=2^{n}$. It is obviously that $2^{2n}\neq O(2^n)$. That is $f(n)\neq\Theta(f(n/2))$.

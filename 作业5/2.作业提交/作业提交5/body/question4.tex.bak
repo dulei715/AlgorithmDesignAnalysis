@@ -1,0 +1,11 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Let us say that a graph $G=(V,E)$ is \emph{near-tree} if it is connected and has at most $n+8$ edges, where $n=|V|$. Give an algorithm with running time $O(n)$ that takes a near-tree $G$ with costs on its edges, and returns minimum spanning tree of $G$. You may assume that all the edge costs are distinct.
+}
+
+
+\hspace*{\fill} \\
+
+We 

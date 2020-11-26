@@ -1,0 +1,14 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+What is the running time of HEAPSORT on an array $A$ of length $n$ that is already sorted in increasing order? What about decreasing order?
+}
+\hspace*{\fill} \\
+
+1. When $n$ is already sorted in increasing order, each mid-node should be shift to the leaf lay. Then, it is obviously that the shift count of each node is its depth. We know that there are $n-\lfloor\frac{n}{2}\rfloor$ leaf nodes whose depth is 0. There are $\lfloor\frac{n}{2}\rfloor-\lfloor\frac{n}{4}\rfloor$ nodes whose depth is 1 ...
+
+Therefore, we can get the running time 
+$T(n)=\sum\limits_{i=1}^{\lfloor log n\rfloor+1}(\lfloor\frac{n}{2^{i-1}}\rfloor-\lfloor\frac{n}{2^{i}}\rfloor)(i-1)$. 
+
+2. When $n$ is already sorted in decreasing order, we don't need to shift any nodes. Therefore the running time is $\lfloor\frac{n}{2}\rfloor$.

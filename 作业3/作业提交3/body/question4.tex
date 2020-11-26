@@ -1,0 +1,32 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Given an $O(n lgk)$-time algorithm to merge $k$ sorted lists into one sorted list, where $n$ is the total number of elements in all the input lists.(\emph{Hint}: Use a min-heap for k-way merging).
+}
+\hspace*{\fill} \\
+
+We can generalize the 2-array merge to $k$-array merge. It is obviously that we can set $k$ points and put each of them at the first elements of the $k$ arrays. Then we should compare the $k$ elements pointed by $k$ the pointers and move the pointer pointing to the smallest one to the next element. As to the comparison of the $k$ elements, we can use min-heap to store and sorted them. The algorithm is showed in Alg~\ref{kmerge}.
+
+\begin{algorithm}
+\caption{Merge $k$ sorted array algorithm}
+\label{kmerge}
+\begin{algorithmic}[1]
+\REQUIRE $k$ sorted arrays $A[1],A[2],...,A[k]$
+\STATE Extract the first element of $A[1],A[2],...,A[k]$ respectively to get array $B$.
+\STATE{Build a min-heap $H$ using array $B$}
+\WHILE{$H\neq \phi$}
+    \STATE{Move the root $r$ element to the result list R}
+    \IF{the array $A[j]$ contains $r$ is not empty}
+        \STATE{Move the next element in $A[j]$ to the root}
+        \STATE{Heapify the heap}
+    \ELSE
+        \STATE{Move the last leaf to the root}
+        \STATE{Heapify the heap}
+    \ENDIF
+\ENDWHILE
+\STATE Return R
+\end{algorithmic}
+\end{algorithm}
+
+We can see that it costs $lg k$ time to get the minimal element in the current min-heap and the total number of elements is $n$. So the time of this merging is $O(n lg k)$.

@@ -1,0 +1,23 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Suppose you are given a directed graph $G=(V,E)$ with costs on the edges $c_e$ for $e\in E$ and a sink $t$(costs may be negative). Assume that you also have finite values $d(v)$ for $v\in V$. Someone claims that, for each node $v\in V$, the quantity $d(v)$ is the cost of the minimum-cost path from node $v$ to the sink $t$.
+}
+
+\hspace*{\fill} \\
+
+\begin{enumerate}
+  \item Give a linear-time algorithm(time $O(m)$ if the graph has $m$ if the graph has $m$ edges) that verifies whether this claim is correct.
+  \item Assume that the distances are correct, and $d(v)$ is finite for all $v\in V$. Now you need to compute distances to a different sink $t'$. Give an $O(m\text{log}n)$ algorithm for computing distances $d'(v)$ for all nodes $v\in V$ to the sink node $t'$. (\emph{Hint}: It is useful to consider a new cost function defined as follows: for edge $e=(v,w)$, let $c'_e=c_e-d(v)+d(w)$). Is there a relation between costs of paths for the two different costs $c$ and $c'$?)
+\end{enumerate}
+
+1. According to Bellman-Ford algorithm, we only need to test each edge whether all of them satisfying ``$d(u)\leq d(v)+w(u,v)$". If not, there is at one vertex that not records the shortest path. This algorithm only test each edge one time, so the time cost is $O(m)$.
+
+2. Notice that if $(u,v)\limits^{\rightarrow}$ is in a shortest path, then $c'_e=c_e-d(v)+d(w)$
+
+
+
+
+
+

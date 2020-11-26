@@ -1,0 +1,28 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Take the following list of functions and arrange them in ascending order of growth rate. That is, if function $g(n)$ immediately follows function $f(n)$ in your list, then it should be the case that $f(n)$ is $O(g(n))$.
+}
+\begin{enumerate}
+  \item $f_1(n)=n^{2.5}$
+  \item $f_2(n)=\sqrt{2n}$
+  \item $f_3(n)=n+10$
+  \item $f_4(n)=10^{n}$
+  \item $f_5(n)=100^n$
+  \item $f_6(n)=n^{2}\textrm{log} n$
+  \item $g_1(n)=2^{\sqrt{\textrm{log} n}}$
+  \item $g_2(n)=2^n$
+  \item $g_4(n)=n^{4/3}$
+  \item $g_3(n)=n(\textrm{log} n)^3$
+  \item $g_5(n)=n^{\textrm{log} n}$
+  \item $g_6(n)=2^{2^n}$
+  \item $g_7(n)=2^{n^2}$
+\end{enumerate}
+
+\hspace*{\fill} \\
+
+{
+
+
+}

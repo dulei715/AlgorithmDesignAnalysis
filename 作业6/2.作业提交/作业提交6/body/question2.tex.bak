@@ -1,0 +1,71 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Suppose we want to replicate a file over a collection of $n$ servers, labeled $S_1,S_2,...,S_n$. To place a copy of the file at server $S_i$ results in \emph{placement cost} of $c_i$ for an integer $c_i>0$.
+}
+
+\textbf{
+Now, if a user requests the file from server $S_i$, and no copy of the file is present at $S_i$, then the servers $S_{i+1},S_{i+2},S_{i+3}...$ are searched in order until a copy of the file is finally found, say at server $S_j$, where $j>i$. This results in an \emph{access cost} of $j-1$.(Note that the lower-indexed servers $S_{i-1},S_{i-2},...$ are not consulted in this search.) The access cost is 0 if $S_i$ holds a copy of the file. We will require that a copy of the file be placed at server $S_n$, so that all such searches will terminate, at the latest, at $S_n$.
+}
+
+\textbf{
+We'd like to place copies of the files at the servers so as to minimize the sum of placement and access costs. Formally, we say that a \emph{configuration} is a choice, for each server $S_i$ with $i=1,2,...,n-1$, of whether to place a copy of the file at $S_i$ or not.(Recall that a copy is always placed at $S_n$.) The \emph{total cost} of a configuration is the sum of all access costs associated with all $n$ servers.
+}
+
+\textbf{
+Give a polynomial-time algorithm to find a configuration of minimum total cost.
+}
+
+The question is equal to that we reverse the sequence of $s_1,...,s_n$. Formally, we denote $s_1,s_,...,s_n$ as $t_n, t_{n-1},...,t_1$. Let $W(p,q)$ be that there are $p$ servers and the $q$-th server with a copy of the file. Then we have $q\leq p$.
+
+Therefore we have
+\begin{equation}
+W(p,q)=
+\left\{
+             \begin{array}{lr}
+             W(p-1,q)+p-q,
+             & (q<p) \\
+             \min_{k=1}^{i-1}\{W(p-1,k)\}+c_p,
+             & (q=p)
+             \end{array}
+\right.
+\end{equation}
+
+
+
+\begin{algorithm}
+\caption{Minimize costs}
+\label{alg_2}
+\begin{algorithmic}[1]
+\REQUIRE a series servers' copy-file cost $c_1,...,c_n$ in reverse order as $(d_1,...,d_n)=(c_n,...,c_1)$
+\STATE{Initialize a lower triangular matrix $[W_{p,q}]_{p>q}$}
+\FOR{$p$ from $1$ to $n$}
+    \FOR{$q$ from $1$ to $p$}
+        \IF{$q<p$}
+            \STATE{$W[p][q]=W[p-1][q]+p-q$}
+        \ELSE
+            \STATE{$W[p][q]=\min^{p-1}_{k=1}\{W[p-1][k]\}+d_p$}
+        \ENDIF
+    \ENDFOR
+\ENDFOR
+
+\STATE{Return $\min^{n}_{k=1}\{W[n][k]\}$}
+
+\end{algorithmic}
+\end{algorithm}
+
+It is easy to see that the running time is $O(n^2)$.
+\begin{equation}
+M_i=
+\left\{
+             \begin{array}{lr}
+             0,
+             & i=0 \\
+             min\{4c,M_{i-1}+rs_i\},
+             & 1\leq i\leq 3\\
+             min\{M_{i-4}+4c,M_{i-1}+rs_i\},
+             & i\geq 4
+             \end{array}
+\right.
+\end{equation}

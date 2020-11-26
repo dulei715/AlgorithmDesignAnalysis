@@ -1,0 +1,12 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Decide whether you think the following statement is true or false. If it is true, give a short explanation. If it is false, give a counterexample.
+}
+
+\emph{Let G be an arbitrary flow network, with a source s, a sink t, and a positive integer capacity $c_e$ on every edge e. If f is a maximum s-t flow in G, then f saturates every edge out of s with flow(i.e. for all edges e out of s, we have $f(e)=c_e$).}
+
+\hspace*{\fill} \\
+
+It is false. 

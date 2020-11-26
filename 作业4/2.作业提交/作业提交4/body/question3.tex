@@ -1,0 +1,19 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Suppose your're consulting for a bank that's concerned about fraud detection, and they come to you with the following problem. They have a collection of $n$ bank cards that they've confiscated, suspecting them of being used in fraud. Each bank card is a small plastic object, containing a magnetic stripe with some encrypted data, and it corresponds to a unique account in the bank. Each account can have many bank cards corresponding to it, and we'll say that two bank cards are \emph{equivalent} if they correspond to the same account.
+}
+
+\textbf{
+It's very difficult to read the account number off a bank card directly, but the bank has a high-tech ``equivalence tester" that takes two bank cards and, after performing some computations, determines whether they are equivalent.
+}
+
+\textbf{
+Their question is the following: among the collection of $n$ cards, is there a set of more than $n/2$ of them that are all equivalent to one another? Assume that the only feasible operations you can do with the cards are to pick two of them and plug them in to the equivalence tester. Show how to decide the answer to their question with only $O(n log n)$ invocations of the equivalence tester.
+}
+\hspace*{\fill} \\
+
+We find that if there is a set of more than $n/2$ of cards that are all equivalent to one another, the mid-number of the $n$ cards must in this set. So the method is easy. We first sort these $n$ cards and select $\lfloor n/2\rfloor+1$-$th$ one. Then we compare this element with all the others to test whether there are $\lfloor n/2\rfloor$ elements equal to it. If so, we say there exists this set, else there not exists this set. We know the time of sorting is $O(n log n)$ and the test time is $O(n)$. So the total time is $O(n log n)$.
+
+Actually, we can decide the answer with only $O(n)$ by using \emph{Linear time selection algorithm}. That is each time we use part of the quick sort algorithm to find the position of the current element. If the position is less than the middle position, we recursive select the left part, else, we recursive select the right part. The time cost is $O(n)$.

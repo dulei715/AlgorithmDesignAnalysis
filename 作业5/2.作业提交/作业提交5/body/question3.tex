@@ -1,0 +1,21 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+
+\textbf{
+Most graph algorithms that take an adjacency-matrix representation as input require time $\Omega(V^2)$, but there are some exceptions. Show how to determine whether a directed graph $G$ contains \emph{\textbf{universal sink}} ——\; a vertex with in-degree$|V|-1$ and out-degree 0 ——\; in time $O(V)$, given an adjacency matrix for $G$.
+}
+
+\hspace*{\fill} \\
+%Firstly, we define that if there is an direct edge from $v$ to $s$, we say that $s$ is adjacent to $v$.
+%We hold two set $C$ and $U$. $C$ records those vertexes that have been visited. $U$ records those vertexes that have not been visited. We initialize $C$ and $u$ by set $C=\phi$ and set $U=V$. We firstly choose a vertex $v_i$ from $U$ randomly and put $v_i$ into $C$. We check the adjacency-matrix to find whether there is a neighbor $v_j$ of $v_i$. If so, we move $v_j$ from $C$ to $U$. We recursively execute this step until we find a vertex $v_k$ satisfying that there is no other vertexes $v_k$ adjacent to $v_k$. Finally, we check whether each of the other vertexes is adjacent to $v_k$. If so, we say we find the \emph{universal sink}, else do not.
+
+%We now analyze the time complex of this algorithm. For each time we check the set, it costs at most $|V|-i$ times checks where $i$ is the serial number. Besides we move at most $|V|-1$ checks. And the last check costs at most $|V|-1$ checks. Therefore, the time complex is $O(\sum\nolimits_{i=1}^{|V|-1})(|V|-i)+2(|V|-1)=O(|V|)$.
+Firstly, we define that if there is an direct edge from $v$ to $s$, we say that $s$ is adjacent to $v$.
+Let $A$ denote the adjacency-matrix. We can divide the vertexes into groups each of which has 2 vertex. We visit each group(containing $v_i$ and $v_j$) and judge the value $A[v_i][v_j]$. If it is 1, then we delete $v_i$, else we delete $v_j$. We recursively execute searching and deleting in the remaining vertexes until there is only one vertex left. Finally, we check whether each of the other vertexes is adjacent to $v_k$. If so, we say we find the \emph{universal sink}, else do not.
+
+We now analyze the time complex of this algorithm. Let $n$ be the quantity of vertexes, we have $T(n)=T(n/2)+n/2$. So the costs of searching and deleting process is $O(n)$. The last step costs $O(n)$. So it costs $O(n)$ time to find the result.
+
+
+
+

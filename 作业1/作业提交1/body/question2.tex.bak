@@ -1,0 +1,28 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Suppose you have algorithms with the six running times listed below.(Assume these are the exact number of operations performed as a function of the input size \emph{n}.) Suppose you have a computer that can perform $10^{10}$ operations per second, and you need to compute a result in at most an hour of computation. For each of the algorithms, what is the largest input size \emph{n} for which you would be able to get the result within an hour?
+}
+
+\textbf{(a) $n^2$}
+
+\textbf{(b) $n^3$}
+
+\textbf{(c) $100n^2$}
+
+\textbf{(d) $n\textrm{log}n$}
+
+\textbf{(e) $2^n$}
+
+\textbf{(f) $2^{2^{n}}$}
+
+
+\hspace*{\fill} \\
+
+{
+    Let $X\in\{(a),{b},{c},{d},{e},{f}\}$ be one of the six running times. We have $X\leq 3600\times 10^10$. We calculate the result in Table~\ref{limited_n}.
+    
+
+
+}

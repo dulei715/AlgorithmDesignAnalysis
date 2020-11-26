@@ -1,0 +1,29 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+Show how to sort $n$ integers in the range $0$ to $n^6-1$ in $O(n)$ time.
+}
+
+\hspace*{\fill} \\
+We can use radix sorting to handle this problem. The steps are showed as follow:
+\begin{itemize}
+  \item We transform each of the $n$ integer in to $n$ radix number.
+  \item We sorted the $n$ integer from the lowest digit to the highest digit by counting sort.
+\end{itemize}
+
+After these two steps, we can get the ordered result. We show the algorithm in Alg~\ref{quest_1}.
+\begin{algorithm}
+\caption{n-radix sort}
+\label{quest_1}
+\begin{algorithmic}[1]
+\REQUIRE $n$ integer $a_1, a_2, ..., a_n$
+\STATE Transform $a_1, a_2, ..., a_n$ into $n$-radix numbers
+\FOR{$i=1;i<=6;++i$}
+    \STATE{Sort $a_1, a_2, ..., a_n$ by $i$-$th$ least digit using counting sort}
+\ENDFOR
+\STATE Return sorted result
+\end{algorithmic}
+\end{algorithm}
+
+We can find that, the time of each counting sort is $O(n)$, and the total time cost is $O(n)$.

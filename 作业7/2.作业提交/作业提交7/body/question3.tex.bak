@@ -1,0 +1,47 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+
+\textbf{
+3.改划选区（Gerrymandering）是以非常小心的方式划分选区的行为，以便得到有利于某个特定政党的选举结果。假设我们有一组$n$ 个选区$P_1,P_2,...,P_n$，每个选区包含$m$个登记的选民。我们假设把这些选区分成两个地区，每个地区包含$n/2$个选区。现在对每个选区，我们有关于对两个政党的每一个有多少选民登记的信息。如果这组选区可以按下述方式划分成两个地区，使得同一个政党在两个地区中都占多数，我们将说这组选区对于改划选区是敏感的。
+}
+
+\textbf{
+给出一个算法来确定给定的一组选区对改划选区是否敏感；你的算法的运行时间应该是$n$与$m$的多项式。
+}
+
+{\color{blue}
+例.加入我们有$n=4$个选区，下面是登记选民的信息。
+}
+
+\begin{table}[H]
+\caption{数据}
+\label{tb}
+\centering
+\scalebox{1}{
+\begin{tabular}{|l|l|c|c|c|c|}
+\hline
+\rowcolor[HTML]{F79646}
+\multicolumn{2}{|l|}{\cellcolor[HTML]{F79646}\textbf{Precinct}} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\ \hline
+\multicolumn{2}{|l|}{Number   registered for part A}            & 55         & 43         & 60         & 47         \\ \hline
+\multicolumn{2}{|l|}{Number   registered for part B}            & 45         & 57         & 40         & 53         \\ \hline
+\end{tabular}
+}
+\end{table}
+
+{\color{blue}
+这组选区是敏感的，因为如果把选区1与4分到一个地区，选区2与3 分到另一个地区，那么政党$A$将在两个地区都占多数。这说明了改划选区中的不公平性；尽管政党$A$在整个人口中只保持微弱多数（205对195），但他却能拿到两个地区的全部选举人票。
+}
+
+假设$A$占大多数，有$a$个选票，如果是敏感的则有
+$$a\geq$$
+
+
+
+
+
+
+
+
+
+
