@@ -2,7 +2,19 @@
 
 \chapter{}
 \textbf{
-4.Given a graph $G=(V,E)$, and a natural number $k$, we can define a relation $\stackrel{G,k}{\longrightarrow}$ on .
+4.Given a graph $G=(V,E)$, and a natural number $k$, we can define a relation $\stackrel{G,k}{\longrightarrow}$ on pairs of vertices of $G$ as follows. If $x,y\in V$, we say that $x\stackrel{G,k}{\longrightarrow}y$ if there exist $k$ mutually edge-disjoint paths from $x$ to $y$ in $G$.
 }
 
+\textbf{Is it true that for every $G$ and every $k\geq 0$, the relation $\stackrel{G,k}{\longrightarrow}$ is transitive? That is, is it always the case that if $x\stackrel{G,k}{\longrightarrow}y$ and $y\stackrel{G,k}{\longrightarrow}z$, then we have $x\stackrel{G,k}{\longrightarrow}z$? Give a proof or a counterexample.
+}
 
+It is true. We give the proof as follow.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/1.eps}\\
+  \caption{Instance}\label{q4_1}
+\end{figure}
+
+As is shown in Fig~\ref{q4_1}, there are $k$ paths from $x$ to $y$. If there is none of the paths from $y$ to $z$, which jointed with those from $x$ to $y$, then the result is true trivially. 
+
+If there are one path from $y$ to $z$ that joint a path from $x$ from $y$, then we can see that 
