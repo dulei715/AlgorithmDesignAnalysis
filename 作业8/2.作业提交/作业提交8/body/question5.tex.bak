@@ -1,0 +1,11 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+4.Given a graph $G=(V,E)$, and a natural number $k$, we can define a relation $\stackrel{G,k}{\longrightarrow}$ on pairs of vertices of $G$ as follows. If $x,y\in V$, we say that $x\stackrel{G,k}{\longrightarrow}y$ if there exist $k$ mutually edge-disjoint paths from $x$ to $y$ in $G$.
+}
+
+\textbf{Is it true that for every $G$ and every $k\geq 0$, the relation $\stackrel{G,k}{\longrightarrow}$ is transitive? That is, is it always the case that if $x\stackrel{G,k}{\longrightarrow}y$ and $y\stackrel{G,k}{\longrightarrow}z$, then we have $x\stackrel{G,k}{\longrightarrow}z$? Give a proof or a counterexample.
+}
+
+
