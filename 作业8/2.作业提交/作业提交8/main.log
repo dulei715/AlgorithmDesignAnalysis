@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2020.9.14)  26 NOV 2020 11:39
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2020.9.14)  26 NOV 2020 14:31
 entering extended mode
 **main.tex
 
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\main.tex
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\main.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 (D:\software\CTEX\MiKTeX\tex\latex\base\book.cls
@@ -24,8 +24,8 @@ File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\setup/package.tex
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\setup/package.tex
 (D:\software\CTEX\MiKTeX\tex\latex\tools\array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen103
@@ -1310,19 +1310,15 @@ LaTeX Warning: Unused global option(s):
     [12.5pt].
 
 
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\main.aux
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\body/question1.aux)
-No file body/question2.aux.
-No file body/question3.aux.
-No file body/question4.aux.
-No file body/question5.aux.
-)
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\main.aux
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\body/question3.aux))
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 13.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 13.
 
- (D:\software\CTEX\MiKTeX\tex\latex\txfonts\omltxmi.fd
+
+(D:\software\CTEX\MiKTeX\tex\latex\txfonts\omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 13.
@@ -1483,11 +1479,14 @@ LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
 LaTeX Info: Redefining \nameref on input line 13.
 
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\main.out)
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\main.out)
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\main.out)
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\main.out)
 \@outlinefile=\write3
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 (D:\software\CTEX\MiKTeX\tex\latex\cjk\UTF8\UTF8.bdg
 File: UTF8.bdg 2008/12/29 4.8.2
@@ -1498,8 +1497,8 @@ File: UTF8.enc 2008/12/29 4.8.2
 (D:\software\CTEX\MiKTeX\tex\latex\cjk\UTF8\UTF8.chr
 File: UTF8.chr 2008/12/29 4.8.2
 )
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\setup/format.tex
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\setup/format.tex
 \c@pubctr=\count332
 \c@currtheoremctr=\count333
 \c@endtheoremctr=\count334
@@ -1530,79 +1529,29 @@ File: UTF8.chr 2008/12/29 4.8.2
 \c@remark=\count359
 \@title@width=\skip135
 )
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\body/question1.tex
-Question 1 1.
-LaTeX Font Info:    Try loading font information for C70+song on input line 6.
-(D:\software\CTEX\CTeX\tex\latex\CJK\UTF8\c70song.fd
-File: c70song.fd 2009/09/23 4.8.2
-)
-Package CJKpunct Info: use punctuation spaces for family 'song' with punctstyle
- (quanjiao) on input line 6.
-LaTeX Font Info:    Calculating math sizes for size <12.5> on input line 10.
-LaTeX Font Info:    Try loading font information for U+txsya on input line 10.
-
-(D:\software\CTEX\MiKTeX\tex\latex\txfonts\utxsya.fd
-File: utxsya.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 10.
-
-(D:\software\CTEX\MiKTeX\tex\latex\txfonts\utxsyb.fd
-File: utxsyb.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txmia on input line 10.
-
-(D:\software\CTEX\MiKTeX\tex\latex\txfonts\utxmia.fd
-File: utxmia.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 10.
-
-(D:\software\CTEX\MiKTeX\tex\latex\txfonts\utxsyc.fd
-File: utxsyc.fd 2000/12/15 v3.1
-)
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 16.
-) [1
-
-
-
-
-
-
-]
+No file body/question3.tex.
 \tf@thm=\write4
-
 
 AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
 
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\main.aux
-(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\作业8\2.作�
-��提交\作业提交8\body/question1.aux))
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\main.aux
+(E:\1.学习\1.学校\1.博1上\2.课程\4.算法设计与分析\AlgorithmDesig
+nAnalysis\作业8\2.作业提交\作业提交8\body/question3.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 44.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: F044699BFA4D23C81C914A6B209F7715;300
-(rerunfilecheck)             After:  CFC6096BA8B82F79BA180A119E90F6AE;57.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18498 strings out of 495355
- 272758 string characters out of 3183378
- 379094 words of memory out of 3000000
- 21219 multiletter control sequences out of 15000+200000
- 32483 words of font info for 101 fonts, out of 3000000 for 9000
+ 17764 strings out of 495355
+ 260053 string characters out of 3183378
+ 344575 words of memory out of 3000000
+ 20563 multiletter control sequences out of 15000+200000
+ 4796 words of font info for 16 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,5n,43p,947b,2345s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,1n,43p,947b,1433s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (1 page, 14964 bytes).
+No pages of output.

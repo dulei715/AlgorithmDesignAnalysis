@@ -1,0 +1,8 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+\textbf{
+2. Decide whether you think the following statement is true or false. If it is true, give a short explanation. If it is false, give a counterexample.
+}
+
+\emph{Let $G$ be an arbitrary flow network, with a source $s$, a sink $t$, and a positive integer capacity $c_e$ on every edge $e$; and let (A,B) be a minimum $s-t$ cut with respect to these capacitys\{$c_e:e\in E$\}. Now suppose we add 1 to every capacity; then (A,B) is still a minimum $s-t$ cut with respect to these new capacities \{$1+c_e:e\in E$\}.}
