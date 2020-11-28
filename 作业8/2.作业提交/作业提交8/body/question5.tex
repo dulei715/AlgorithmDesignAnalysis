@@ -10,4 +10,5 @@ $$|\{(u,v):(u,v)\in E\}|=|\{(v,w):(v,w)\in E\}|$$
 Let $x,y$ be two nodes of $G$, and suppose that there exist $k$ mutually edge-disjoint paths from $y$ to $x$? Give a proof or a counterexample with explanation.
 }
 
-
+It is true.
+Consider the $k$ paths from $x$ to $y$. We can see that these $k$ path generate a flow. Its source $x$'s outer degree and sink $y$'s inner degree are both $k$, the other vertexes' outer degrees are equal to the inner degrees. Because the condition says the number of edges into each vertex's is equal to the number of those out of the vertex, $y$ has to find vertex to make its outer degree equal to its inner degree, which will remedy the inner degree of $x$.

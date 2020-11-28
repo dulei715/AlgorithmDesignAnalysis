@@ -1,0 +1,58 @@
+2% !Mode:: "TeX:UTF-8"
+
+\chapter{}
+
+1、根据双汇发展（000895）的三大报表，评价一下双汇发展这家公司。对比公司选龙大肉食、华统股份两家公司。（100分）
+%2、根据嘉寓股份（300117）的三大报表，评价一下嘉寓股份这家公司。对比公司选金螳螂、亚厦股份两家公司。（100分）
+\hspace*{\fill} \\
+
+{\kai
+
+
+\section{分红分析}
+\textbf{数据汇总和计算。}我们直接在双汇发展2014年至2018年5年的财务报表中搜索``分红"，查找到``年度分红"表，汇总后得到表~\ref{shuanghui_fenhong}。
+\begin{table}[H]
+\caption{2014到2018年双汇发展年度分红数据统计}
+\label{shuanghui_fenhong}
+\centering
+\scalebox{0.6}{
+
+}
+\end{table}
+
+
+\begin{figure}[!htbp]
+\centering
+\subfigure[2016年]{
+\includegraphics[width=0.497\textwidth]{figures/1.eps}}
+\subfigure[2015年]{
+\includegraphics[width=0.42\textwidth]{figures/2.eps}}
+\caption{同花顺双汇发展分红情况查询}\label{shuanghui_fenhongpaixi}
+\end{figure}
+
+
+
+
+
+
+
+\begin{table}[H]
+\caption{2014到2018年双汇发展现金及现金等价物的增加额和分红数据统计}
+\label{shuanghui_xianjinjixianjindengjiawu_fenhong}
+\centering
+\scalebox{0.65}{
+
+}
+\end{table}
+
+
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{figures/1.eps}\\
+  \caption{主营业务部分明细}\label{shuanghui_zhuyingzengzhang}
+\end{figure}
+
+
+
+}

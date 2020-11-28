@@ -15,6 +15,13 @@ It is true. We give the proof as follow.
   \caption{Instance}\label{q4_1}
 \end{figure}
 
-As is shown in Fig~\ref{q4_1}, there are $k$ paths from $x$ to $y$. If there is none of the paths from $y$ to $z$, which jointed with those from $x$ to $y$, then the result is true trivially. 
+As is shown in Fig~\ref{q4_1}, there are $k$ paths from $x$ to $y$. If there is none of the paths from $y$ to $z$, which jointed with those from $x$ to $y$, then the result is true trivially.
 
-If there are one path from $y$ to $z$ that joint a path from $x$ from $y$, then we can see that 
+If there are one path from $y$ to $z$ that joint a path from $x$ from $y$, then we can see that there will appear another path that from $x$ to $z$ without via $y$. It does not decrease the quantity of paths of the trivial case.
+
+Consider a general case, as is shown in Fig~\ref{q4_2},
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/2.eps}\\
+  \caption{Instance}\label{q4_2}
+\end{figure}
